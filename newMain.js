@@ -1,16 +1,19 @@
-const btn = document.querySelector('button')
+const btn = document.querySelector('.button')
 let number = 1
 
 const addElement = function(){
-    let div = document.createElement('div');
-    div.textContent = number;
-    document.body.appendChild(div);
+    const rectangle = document.createElement('div');
+    rectangle.classList.add('rectangle');
+    rectangle.textContent = number;
+
     
 
-    if (number%5==0){
-        div.classList.add('circle')
+    if (number % 5 === 0 ){
+        rectangle.classList.add('rectangle--rounded');
 
     }
+
+    document.body.appendChild(rectangle);
     number++;
 }
 
